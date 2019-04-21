@@ -1,0 +1,14 @@
+{
+  "name": "jquery-numerator",
+  "homepage": "https://github.com/garethdn/jquery-numerator",
+  "version": "0.2.0",
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.0",
+    "commit": "c1c5449dfb1beb365e70e2da6c3164c98ac39f1a"
+  },
+  "_source": "https://github.com/garethdn/jquery-numerator.git",
+  "_target": "0.2.0",
+  "_originalSource": "jquery-numerator"
+}

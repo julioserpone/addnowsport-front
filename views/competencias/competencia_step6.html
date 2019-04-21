@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="col-md-8">
+
+
+<div class="box box-primary" ng-repeat="fecha in evento.fechas">
+  <div class="box-header with-border">
+    <h3 class="box-title">Distancias que se correrán en la fecha [[fecha.fecha]]</h3>
+    <div class="box-tools pull-right">
+      <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+    </div><!-- /.box-tools -->
+  </div><!-- /.box-header -->
+  <div class="box-body">
+         <div class="row">
+           <div class="col-sm-4 col-md-12">
+              <form class="form">
+                <div class="form-group">
+                  <label for="exampleInputName2">Ingrese una distancia</label>
+                  <input type="text" class="form-control" id="exampleInputName2" placeholder="20k">
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="">
+                    Deseo limitar por un grupo etario 
+                  </label>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="tipo">Edad</label>
+                          <span class="span-requerido">*</span>
+                          <select
+                                  name="tipo" id="tipo" class="form-control"
+                                  placeholder="Disciplina"
+                                  ng-model="evento.disciplina"
+                                  ng-options="item.nombre for item in disciplinas track by item.id"
+                                  ></select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="tipo">Edad</label>
+                              <span class="span-requerido">*</span>
+                              <select
+                                      name="tipo" id="tipo" class="form-control"
+                                      placeholder="Disciplina"
+                                      ng-model=""
+                                      ng-options="item.edad for item in edades track by item.id"
+                                      ></select>
+                          </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-default">Agregar</button>
+              </form>
+          </div>
+        </div>
+        <div class="row">
+           <div class="col-sm-4 col-md-12">
+             
+             <!--INICIO DE LOS ACORDIONES-->
+         
+
+             <!--FIN DE LOS ACORDIONES-->
+
+          </div>
+        </div>
+        
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+    </div>
+</div><!-- /.box -->
+
+<div class="box box-primary" ng-show="(!evento.fechas.length > 0)">
+  <div class="box-header with-border">
+    <h3 class="box-title">No se han seleccionado aun</h3>
+    <div class="box-tools pull-right">
+      <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+    </div><!-- /.box-tools -->
+  </div><!-- /.box-header -->
+  <div class="box-body"></div>
+</div>
+  </div>
+ </div> 

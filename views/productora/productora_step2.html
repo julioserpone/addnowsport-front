@@ -1,0 +1,219 @@
+<div class="row">
+  <div class="col-md-8">
+
+        <div class="box box-primary">
+  <div class="box-header with-border">
+    <h3 class="box-title">Datos principales</h3>
+    <div class="box-tools pull-right">
+      <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+    </div><!-- /.box-tools -->
+  </div><!-- /.box-header -->
+  <div class="box-body">
+         <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img data-src="holder.js/100%x180" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTU3MGNlMTE2MjkgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTcwY2UxMTYyOSI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MSIgeT0iOTQuNSI+MTcxeDE4MDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
+              
+            </div>
+          </div>
+           <div class="col-sm-4 col-md-6">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Nombe de la productora</label>
+                    <input type="text" class="form-control" 
+                    id="exampleInputPassword1"
+                     placeholder="Ingrese el nombre de su productora"
+                     ng-model="productora.nombre_comercial">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Razón social</label>
+                    <input type="text" class="form-control" 
+                    id="exampleInputPassword1"
+                     placeholder="Razón social de su productora"
+                     ng-model="productora.razon_social">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">CUIT/RUT</label>
+                    <input type="text" class="form-control" 
+                    id="exampleInputPassword1"
+                     placeholder="CUIT/RUT"
+                     ng-model="productora.cuit_rut">
+                  </div>
+                      <div class="input-group" style="">
+                          <input
+                                  ng-disabled="true"
+                                  id="adjunto_name"
+                                  name="adjunto_name"
+                                  class="form-control input-sm"
+                                  ng-model="wizard.file_name"/>
+                                              <span class="input-group-btn">
+                                                  <button
+
+                                                          placeholder="Adjunto"
+                                                          id="adjunto_file"
+                                                          type="file"
+                                                          class=" btn btn-primary input-sm"
+                                                          style=" margin-top: 0px"
+                                                          ng-file-select
+                                                          ng-file-change="wizard.process_file($files)"
+                                                          ng-multiple="false"
+                                                          ><span class="glyphicon glyphicon-upload"></span></button>
+                                                  </span>
+                      </div>
+                      <div ng-show="file.length > 0">
+                          <span class="sel-file" id="content-upload"></span>
+                      </div>
+
+                  
+                
+                </form>
+          </div>
+        </div>
+        <div class="row">
+             <div class="col-md-6">
+                   <div class="form-group">
+                    <label for="tipo">País</label>
+                    <span class="span-requerido">*</span>
+                    <select
+                            name="tipo" id="tipo" class="form-control"
+                            placeholder="País"
+                            ng-model="productora.pais"
+                            ng-options="item.nombre for item in paises track by item.id"
+                            ></select>
+                   </div>
+                   <div class="form-group">
+                    <label for="exampleInputPassword1">Dirección</label>
+                    <input type="text" class="form-control" 
+                    id="exampleInputPassword1"
+                     placeholder="Dirección"
+                     ng-model="productora.direccion">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Teléfono Celular</label>
+                    <input type="text" class="form-control" 
+                    id="exampleInputPassword1"
+                     placeholder=""
+                     ng-model="productora.telefono">
+                  </div>
+             </div>
+             <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Provincia</label>
+                    <input type="text" class="form-control" 
+                    id="exampleInputPassword1"
+                     placeholder="Provincia"
+                     ng-model="productora.provincia">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Email</label>
+                    <input type="text" class="form-control" 
+                    id="exampleInputPassword1"
+                     placeholder="Email"
+                     ng-model="productora.correo">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Website</label>
+                    <input type="text" class="form-control" 
+                    id="exampleInputPassword1"
+                     placeholder="Website"
+                     ng-model="productora.web">
+                  </div>
+             </div>
+        </div>
+        <div class="row">
+             <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Descripcion</label>
+                    <textarea  class="form-control" 
+                     placeholder="Descripción"
+                     ng-model="productora.descripcion"></textarea>
+                  </div>
+             </div>
+        </div>
+    </div><!-- /.box-body -->
+</div><!-- /.box -->
+
+ <div class="box box-primary">
+  <div class="box-header with-border">
+    <h3 class="box-title">Redes Sociales</h3>
+    <div class="box-tools pull-right">
+      <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+    </div><!-- /.box-tools -->
+  </div><!-- /.box-header -->
+  <div class="box-body">
+          <form role="form"> 
+            <div class="form-group has-feedback has-feedback-left">
+              <label class="control-label">Facebook</label>
+              <input type="text" class="form-control" placeholder="Facebook" ng-model="productora.redes_sociales.facebook"/>
+              <i class="form-control-feedback fa fa fa-facebook-official"></i>
+            </div>
+          </form>
+          <form role="form"> 
+            <div class="form-group has-feedback has-feedback-left">
+              <label class="control-label">Twitter</label>
+              <input type="text" class="form-control" placeholder="Twitter" ng-model="productora.redes_sociales.twitter" />
+              <i class="form-control-feedback fa fa-twitter"></i>
+            </div>
+          </form>
+          <form role="form"> 
+            <div class="form-group has-feedback has-feedback-left">
+              <label class="control-label">Google</label>
+              <input type="text" class="form-control" placeholder="Google" ng-model="productora.redes_sociales.google" />
+              <i class="form-control-feedback fa fa-google-plus"></i>
+            </div>
+          </form>
+  </div><!-- /.box-body -->
+</div><!-- /.box -->
+
+  </div>
+  <div class="col-md-4">
+        
+      <!-- Apply any bg-* class to to the info-box to color it -->
+    <div class="info-box bg-blue">
+      <span class="info-box-icon"><i class="fa fa-phone"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Nuestro teléfono</span>
+        <span class="info-box-number">351650684</span>
+        <!-- The progress section is optional -->
+        <div class="progress">
+          <div class="progress-bar" style="width: 70%"></div>
+        </div>
+        <span class="progress-description">
+          +54 (Si llamas desde el extranjero)
+        </span>
+      </div><!-- /.info-box-content -->
+    </div><!-- /.info-box -->
+       <!-- Apply any bg-* class to to the info-box to color it -->
+    <div class="info-box bg-blue">
+      <span class="info-box-icon"><i class="fa fa-facebook-official"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Facebook</span>
+        <span class="info-box-number">addnow</span>
+        <!-- The progress section is optional -->
+     
+      </div><!-- /.info-box-content -->
+    </div><!-- /.info-box -->
+       <!-- Apply any bg-* class to to the info-box to color it -->
+    <div class="info-box bg-blue">
+      <span class="info-box-icon"><i class="fa fa-twitter"></i></span>
+      <div class="info-box-content">
+        <span class="info-box-text">Twitter</span>
+        <span class="info-box-number">@addnow</span>
+        <!-- The progress section is optional -->
+        
+      </div><!-- /.info-box-content -->
+    </div><!-- /.info-box -->
+    <div class="box box-solid box-warning">
+      <div class="box-header with-border">
+        <h3 class="box-title">Datos principales</h3>
+        <div class="box-tools pull-right">
+          <button class="btn btn-box-tool" ><i class="glyphicon glyphicon-info-sign"></i></button>
+        </div><!-- /.box-tools -->
+      </div>
+        <div class="box-body">
+            
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non pulvinar dolor. Aenean vel accumsan nisl. Morbi pretium felis ac dui rhoncus imperdiet nec at diam. Vestibulum vulputate aliquet sapien, a hendrerit nulla sagittis non. Curabitur eget lectus massa. Integer fringilla ipsum sit amet nisi placerat tempus. Nullam sed magna sed nunc sagittis commodo. Maecenas semper ullamcorper massa in venenatis.
+        </div>
+    </div>
+      </div>
+</div>

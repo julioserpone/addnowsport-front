@@ -1,0 +1,16 @@
+IDCOMERCIO = 597031052769
+MEDCOM = 2
+TBK_KEY_ID = 101
+PARAMVERIFCOM = 0
+URLCGICOM = http://www.kairosnowplay.com/kcc/cgi-bin/tbk_bp_resultado.cgi
+SERVERCOM = 192.254.189.153
+PORTCOM = 80
+WHITELISTCOM = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789./:=&?_
+HOST = 192.254.189.153
+WPORT = 80
+URLCGITRA = /filtroUnificado/bp_revision.cgi
+URLCGIMEDTRA = /filtroUnificado/bp_validacion.cgi
+SERVERTRA = https://webpay.transbank.cl
+PORTTRA = 443
+PREFIJO_CONF_TR = HTML_
+HTML_TR_NORMAL = http://www.kairosnowplay.com/pago/webpay
